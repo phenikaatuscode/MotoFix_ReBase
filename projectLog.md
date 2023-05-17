@@ -17,7 +17,7 @@
   - Bắt đầu tìm hiểu và thực hiện tính năng định vị và chỉ đường bằng bản đồ
 
 - Khó khăn:
-  - Gặp khó khăn khi tích hợp Google Maps API
+  - Gặp khó khăn khi tích hợp Google Maps API.
   - Tìm kiếm và lựa chọn hệ thống thanh toán phù hợp
 
 - Kế hoạch :
