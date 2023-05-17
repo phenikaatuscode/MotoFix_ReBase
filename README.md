@@ -85,6 +85,8 @@ Chạy ứng dụng bằng lệnh flutter run.
 21011639 - Nguyễn Anh Tú : Kiểm thử 
   
 21011619 - Nguyễn Quốc Oai : Viết projectLog
+  
+  21011603 - Nguyễn Bá Việt Hoàng : Thiết kế tính năng
 
 
 Giấy phép:
