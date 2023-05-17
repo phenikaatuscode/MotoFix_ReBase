@@ -35,6 +35,7 @@ Run the app using the flutter run command.
 Contributing
 
 21011641 - Tran Anh Tu
+21011639 - Nguyen Anh Tu  
 
 
 License
@@ -77,7 +78,7 @@ Chạy ứng dụng bằng lệnh flutter run.
 Đóng góp:
 
 21011641 - Trần Anh Tú - Trưởng nhóm : Code
-  
+21011639 - Nguyễn Anh Tú : Kiểm thử  
 
 
 Giấy phép:
