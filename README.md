@@ -76,7 +76,9 @@ Thêm các tệp cấu hình Firebase của bạn vào dự án.
 Chạy ứng dụng bằng lệnh flutter run.
 Đóng góp:
 
-21011641 - Trần Anh Tú
+21011641 - Trần Anh Tú - Trưởng nhóm : Code
+  
+
 
 Giấy phép:
 
