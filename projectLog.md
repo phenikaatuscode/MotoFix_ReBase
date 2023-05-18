@@ -29,6 +29,7 @@
 - Trần Anh Tú
 - Nguyễn Anh Tú
 - Nguyễn Bá Việt Hoàng
+- Nguyễn Quốc Oai
 
 ## Tuần 2 (27/03/2023 - 02/04/2023)
 
@@ -53,6 +54,7 @@
 - Trần Anh Tú
 - Nguyễn Anh Tú
 - Nguyễn Bá Việt Hoàng
+- Nguyễn Quốc Oai
 
 ## Tuần 3 (10/04/2023 - 16/04/2023)
 
@@ -73,7 +75,7 @@
   - Tiếp tục thiết kế giao diện người dùng
   - Nghiên cứu và lựa chọn hệ thống gửi thông báo phù hợp
 
-**Người tham gia:** Trần Anh Tú, Nguyễn Anh Tú, Nguyễn Bá Việt Hoàng
+**Người tham gia:** Trần Anh Tú, Nguyễn Anh Tú, Nguyễn Bá Việt Hoàng, Nguyễn Quốc Oai
 
 ## Tuần 4 (17/04/2023 - 23/04/2023)
 
