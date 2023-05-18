@@ -40,7 +40,7 @@ Contributing
   
 21011619 - Nguyen Quoc Oai 
   
-  21011603 -Nguyen Ba Viet Hoàng
+  21011603 -Nguyen Ba Viet Hoang
 
 
 License
