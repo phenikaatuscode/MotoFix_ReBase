@@ -1,0 +1,2 @@
+- Tải cái firebase về bản tuỳ máy : https://firebase.google.com/docs/cli#install-cli
+- 

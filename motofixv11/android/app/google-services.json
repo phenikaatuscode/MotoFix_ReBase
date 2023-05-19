@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "438619392386",
+    "project_id": "motorfix-2023",
+    "storage_bucket": "motorfix-2023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438619392386:android:026e11bd5ce98931a4679b",
+        "android_client_info": {
+          "package_name": "com.example.motofixv11"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "438619392386-4l0ob3rjgtr63fjb27qfak0fcfj6asrd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-GRxEm7TH04sT2TLuoBS_bDyJ-gqkfg0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "438619392386-4l0ob3rjgtr63fjb27qfak0fcfj6asrd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
