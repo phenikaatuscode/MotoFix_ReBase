@@ -80,7 +80,7 @@
 ## Tuần 4 (17/04/2023 - 23/04/2023)
 
 **Ghi chú:**
-Hoàn thành dự án MotoFix - Ứng dụng đặt lịch sửa chữa xe máy 
+Hoàn thành dự án MotoFix - Ứng dụng đặt lịch sửa chữa xe máy. 
 
 ## Tuần 5 (23/04/2023 - Now ) 
 
