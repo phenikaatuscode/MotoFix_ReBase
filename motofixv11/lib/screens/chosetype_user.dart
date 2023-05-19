@@ -74,7 +74,7 @@ class _ChooseTypeUserState extends State<ChooseTypeUser> {
                               height: 170,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                color: isButton1Selected ? Colors.white : Colors.orange,
+                                color: isButton1Selected ? Colors.orange : Colors.white,
                               ),
                               child: Image.asset(
                                 'images/icon/mechanic_icon.png',
@@ -118,7 +118,7 @@ class _ChooseTypeUserState extends State<ChooseTypeUser> {
                               height: 170,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                color: isButton2Selected ? Colors.white : Colors.orange,
+                                color: isButton2Selected ? Colors.orange : Colors.white,
                               ),
                               child: Image.asset(
                                 'images/icon/user_icon.png',
