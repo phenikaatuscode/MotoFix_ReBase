@@ -35,6 +35,12 @@ Run the app using the flutter run command.
 Contributing
 
 21011641 - Tran Anh Tu
+  
+21011639 - Nguyen Anh Tu  
+  
+21011619 - Nguyen Quoc Oai 
+  
+  21011603 -Nguyen Ba Viet Hoang
 
 
 License
@@ -76,7 +82,14 @@ Thêm các tệp cấu hình Firebase của bạn vào dự án.
 Chạy ứng dụng bằng lệnh flutter run.
 Đóng góp:
 
-21011641 - Trần Anh Tú
+21011641 - Trần Anh Tú - Trưởng nhóm : Code
+
+21011639 - Nguyễn Anh Tú : Kiểm thử 
+  
+21011619 - Nguyễn Quốc Oai : Viết projectLog
+  
+  21011603 - Nguyễn Bá Việt Hoàng : Thiết kế tính năng
+
 
 Giấy phép:
 

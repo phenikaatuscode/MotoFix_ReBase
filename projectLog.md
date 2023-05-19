@@ -17,7 +17,7 @@
   - Bắt đầu tìm hiểu và thực hiện tính năng định vị và chỉ đường bằng bản đồ
 
 - Khó khăn:
-  - Gặp khó khăn khi tích hợp Google Maps API
+  - Gặp khó khăn khi tích hợp Google Maps API.
   - Tìm kiếm và lựa chọn hệ thống thanh toán phù hợp
 
 - Kế hoạch :
@@ -29,6 +29,7 @@
 - Trần Anh Tú
 - Nguyễn Anh Tú
 - Nguyễn Bá Việt Hoàng
+- Nguyễn Quốc Oai
 
 ## Tuần 2 (27/03/2023 - 02/04/2023)
 
@@ -53,6 +54,7 @@
 - Trần Anh Tú
 - Nguyễn Anh Tú
 - Nguyễn Bá Việt Hoàng
+- Nguyễn Quốc Oai
 
 ## Tuần 3 (10/04/2023 - 16/04/2023)
 
@@ -73,13 +75,18 @@
   - Tiếp tục thiết kế giao diện người dùng
   - Nghiên cứu và lựa chọn hệ thống gửi thông báo phù hợp
 
-**Người tham gia:** Trần Anh Tú, Nguyễn Anh Tú, Nguyễn Bá Việt Hoàng
+**Người tham gia:** Trần Anh Tú, Nguyễn Anh Tú, Nguyễn Bá Việt Hoàng, Nguyễn Quốc Oai
 
 ## Tuần 4 (17/04/2023 - 23/04/2023)
 
 **Ghi chú:**
-Hoàn thành dự án MotoFix - Ứng dụng đặt lịch sửa chữa xe máy 
+Hoàn thành dự án MotoFix - Ứng dụng đặt lịch sửa chữa xe máy. 
 
-**Người tham gia:** Trần Anh Tú, Nguyễn Anh Tú, Nguyễn Bá Việt Hoàng 
+## Tuần 5 (23/04/2023 - Now ) 
+
+Viết báo cáo: 
+
+
+**Người tham gia:** Trần Anh Tú, Nguyễn Anh Tú, Nguyễn Bá Việt Hoàng, Nguyễn Quốc Oai
 
 ## Rebase lại nhánh master và push lên nhánh master trên github update version 1.0.0
