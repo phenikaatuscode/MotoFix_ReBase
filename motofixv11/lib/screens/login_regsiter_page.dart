@@ -25,10 +25,13 @@ class _LoginPageState extends State<LoginPage> {
       );
     } on FirebaseAuthException catch (e) {
       setState(() {
-        if (e.code == 'invalid-email' || e.code == 'user-not-found') {
+        if (e.code == 'invalid-email' ) {
           errorMessage = 'Email không hợp lệ!';
         } else if (e.code == 'wrong-password') {
           errorMessage = 'Sai mật khẩu!';
+        } else if (e.code == 'user-not-found') {
+          errorMessage = 'Người dùng không tồn tại!';
+        }
         } else {
       errorMessage = 'Vui lòng nhập Email / Mật khẩu!';
         }
@@ -39,16 +42,6 @@ class _LoginPageState extends State<LoginPage> {
 
 
 
-  Widget _title() {
-    return const Text(
-      'MotorFix',
-      style: TextStyle(
-        fontSize: 24,
-        fontWeight: FontWeight.bold,
-        color: Colors.lightBlue,
-      ),
-    );
-  }
 
   Widget _logo() {
     return Container(
