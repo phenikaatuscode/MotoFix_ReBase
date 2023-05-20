@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:motofixv11/screens/login_regsiter_page.dart';
 import 'package:motofixv11/screens/home_page.dart';
-import 'package:motofixv11/auth.dart';
+import 'package:motofixv11/controller/auth.dart';
 
 class WidgetTree extends StatefulWidget {
   const WidgetTree({Key? key}) : super(key: key);

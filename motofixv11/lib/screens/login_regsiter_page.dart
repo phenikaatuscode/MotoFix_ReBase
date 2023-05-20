@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:motofixv11/auth.dart';
+import 'package:motofixv11/controller/auth.dart';
 import 'package:motofixv11/screens/chosetype_user.dart';
 
 class LoginPage extends StatefulWidget {
