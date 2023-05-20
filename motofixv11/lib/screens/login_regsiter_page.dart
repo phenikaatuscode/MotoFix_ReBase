@@ -40,9 +40,6 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
-
-
-
   Widget _logo() {
     return Container(
       margin: const EdgeInsets.only(bottom: 20),
