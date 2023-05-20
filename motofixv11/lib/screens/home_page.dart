@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:motofixv11/controller/auth.dart';
-import 'package:motofixv11/widget/widget_googlemap.dart';
-import 'package:motofixv11/widget/googlemap_test.dart';
+import 'package:motofixv11/widget/google_nav.dart';
 import 'package:motofixv11/screens/login_regsiter_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -86,7 +85,7 @@ class HomePage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => MapScreen(), // Navigate to MapScreen widget
+                  builder: (context) => GoogleNav(), // Navigate to GoogleNav widget
                 ),
               );
             },
@@ -107,9 +106,18 @@ class HomePage extends StatelessWidget {
           ),
           Column(
             children: <Widget>[
-              Icon(Icons.search, color: Colors.white),
+              GestureDetector(onTap:(
+
+              ){ Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => GoogleNav(), // Navigate to the login screen
+                ),
+              ); }, child: Icon(Icons.search, color: Colors.white)),
+
               const SizedBox(height: 8),
               Text('Find Mechanics', style: TextStyle(color: Colors.white)),
+
             ],
           ),
         ],
@@ -123,25 +131,19 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Home'),
       ),
-      body: Stack(
-        children: <Widget>[
-          GoogleMapWidget(),
-          _userAvatar(context),
-          Padding(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-                SizedBox(height: 40),
-                _searchBar(),
-                const SizedBox(height: 20),
-                Expanded(child: SizedBox()),
-                _featureIcons(context),
-                SizedBox(height: 20),
-              ],
-            ),
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            SizedBox(height: 40),
+            _searchBar(),
+            const SizedBox(height: 20),
+            Expanded(child: SizedBox()),
+            _featureIcons(context),
+            SizedBox(height: 20),
+          ],
+        ),
       ),
     );
   }
