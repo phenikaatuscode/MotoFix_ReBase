@@ -19,6 +19,5 @@ class Mechanic extends User {
         dateOfBirth: dateOfBirth,
       );
 
-  String get currentWorkplace => _currentWorkplace;
-  set currentWorkplace(String value) => _currentWorkplace = value;
+
 }

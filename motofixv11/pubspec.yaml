@@ -1,5 +1,5 @@
 name: motofixv11
-description: A new Flutter project.
+description: Motofix - Kĩ thuật máy tính - 2023 - Phenikaa University.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -22,7 +22,7 @@ environment:
   sdk: '>=2.19.6 <3.0.0'
 
 assets:
-  - assets/images/picture/logo.png
+
  
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -36,13 +36,19 @@ dependencies:
   firebase_core: ^2.10.0
   firebase_auth: ^4.4.2
   firebase_database: ^10.1.1
-  google_maps_flutter: ^2.1.1
+  cloud_firestore: ^4.7.1
+
+  dio: ^5.1.2
+  google_maps_flutter: ^2.2.6
   geolocator: ^9.0.2
+
   
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  flutter_polyline_points: ^1.0.0
+  location: ^4.4.0
 
 dev_dependencies:
   flutter_test:
@@ -75,7 +81,7 @@ flutter:
       - images/picture/logo2.png
       - images/picture/logoblue.png
       - images/picture/choosetype_bg.png
-      
+
       - images/icon/mechanic_icon.png
       - images/icon/user_icon.png
      
