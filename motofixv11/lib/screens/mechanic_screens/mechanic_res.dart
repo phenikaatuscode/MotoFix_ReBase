@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:motofixv11/homepage.dart';
+import 'package:motofixv11/controller/auth.dart';
+
 class MechanicResScreen extends StatefulWidget {
   @override
   _MechanicResScreenState createState() => _MechanicResScreenState();
@@ -13,6 +15,8 @@ class _MechanicResScreenState extends State<MechanicResScreen> {
   final TextEditingController _dobController = TextEditingController();
   final TextEditingController _workplaceController = TextEditingController();
   bool _agreedToTerms = false;
+
+  final Auth _auth = Auth();
 
   @override
   Widget build(BuildContext context) {
@@ -121,7 +125,6 @@ class _MechanicResScreenState extends State<MechanicResScreen> {
                 ),
                 child: Text('Register'),
                 onPressed: _agreedToTerms ? _registerUser : null,
-                
               ),
               SizedBox(height: 10),
               if (!_agreedToTerms)
@@ -139,7 +142,7 @@ class _MechanicResScreenState extends State<MechanicResScreen> {
     );
   }
 
-  void _registerUser() {
+  void _registerUser() async {
     String name = _nameController.text;
     String phoneNumber = _phoneController.text;
     String email = _emailController.text;
@@ -171,44 +174,69 @@ class _MechanicResScreenState extends State<MechanicResScreen> {
           );
         },
       );
-      
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => MyHomePage(title: 'MotoFix'), // Navigate to the home page
-          ),
-        );
       return;
     }
 
     // Check if the user has agreed to the terms and conditions
     if (_agreedToTerms) {
-      // TODO: Implement your registration logic here
+      try {
+        await _auth.createUserWithEmailAndPassword(
+          email: email,
+          password: password,
+          name: name,
+        );
 
-      _nameController.clear();
-      _phoneController.clear();
-      _emailController.clear();
-      _passwordController.clear();
-      _dobController.clear();
-      _workplaceController.clear();
+        _nameController.clear();
+        _phoneController.clear();
+        _emailController.clear();
+        _passwordController.clear();
+        _dobController.clear();
+        _workplaceController.clear();
 
-      showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: Text('Registration Successful'),
-            content: Text('You have successfully registered as a mechanic.'),
-            actions: [
-              TextButton(
-                child: Text('OK'),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
-            ],
-          );
-        },
-      );
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text('Registration Successful'),
+              content: Text('You have successfully registered as a mechanic.'),
+              actions: [
+                TextButton(
+                  child: Text('OK'),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                ),
+              ],
+            );
+          },
+        );
+
+        // Navigate to the home page
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => MyHomePage(title: 'MotoFix'),
+          ),
+        );
+      } catch (error) {
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text('Registration Error'),
+              content: Text('An error occurred during registration. Please try again.'),
+              actions: [
+                TextButton(
+                  child: Text('OK'),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                ),
+              ],
+            );
+          },
+        );
+      }
     } else {
       showDialog(
         context: context,

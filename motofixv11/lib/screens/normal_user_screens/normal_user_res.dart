@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:motofixv11/controller/auth.dart';
+import 'package:motofixv11/homepage.dart';
 
 class NormalUserResScreen extends StatefulWidget {
   @override
@@ -12,6 +15,7 @@ class _NormalUserResScreenState extends State<NormalUserResScreen> {
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _vehicleTypeController = TextEditingController();
   bool _agreedToTerms = false;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +38,6 @@ class _NormalUserResScreenState extends State<NormalUserResScreen> {
                   },
                 ),
               ),
-
               SizedBox(height: 20),
               Text(
                 'User Registration',
@@ -92,7 +95,7 @@ class _NormalUserResScreenState extends State<NormalUserResScreen> {
                     value: _agreedToTerms,
                     onChanged: (value) {
                       setState(() {
-                        _agreedToTerms = value!;
+                        _agreedToTerms = value ?? false;
                       });
                     },
                   ),
@@ -129,7 +132,7 @@ class _NormalUserResScreenState extends State<NormalUserResScreen> {
     );
   }
 
-  void _registerUser() {
+  void _registerUser() async {
     String name = _nameController.text;
     String phoneNumber = _phoneController.text;
     String email = _emailController.text;
@@ -164,31 +167,56 @@ class _NormalUserResScreenState extends State<NormalUserResScreen> {
 
     // Check if the user has agreed to the terms and conditions
     if (_agreedToTerms) {
-      // TODO: Implement your registration logic here
+      try {
+        UserCredential userCredential = await _auth.createUserWithEmailAndPassword(
+          email: email,
+          password: password,
+        );
 
-      _nameController.clear();
-      _phoneController.clear();
-      _emailController.clear();
-      _passwordController.clear();
-      _vehicleTypeController.clear();
+        // TODO: Save additional user data to database (e.g., name, phone number, vehicle type)
 
-      showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: Text('Registration Successful'),
-            content: Text('You have successfully registered as a normal user.'),
-            actions: [
-              TextButton(
-                child: Text('OK'),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
-            ],
-          );
-        },
-      );
+        _nameController.clear();
+        _phoneController.clear();
+        _emailController.clear();
+        _passwordController.clear();
+        _vehicleTypeController.clear();
+
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text('Registration Successful'),
+              content: Text('You have successfully registered as a normal user.'),
+              actions: [
+                TextButton(
+                  child: Text('OK'),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                ),
+              ],
+            );
+          },
+        );
+      } catch (error) {
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text('Registration Error'),
+              content: Text('An error occurred during registration. Please try again.'),
+              actions: [
+                TextButton(
+                  child: Text('OK'),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                ),
+              ],
+            );
+          },
+        );
+      }
     } else {
       showDialog(
         context: context,
