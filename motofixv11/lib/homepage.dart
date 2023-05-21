@@ -5,17 +5,12 @@ import 'package:motofixv11/widget/button.dart';
 import 'package:motofixv11/widget/button2.dart';
 import 'package:motofixv11/widget/google_nav.dart';
 import 'package:motofixv11/screens/msages.dart';
+import 'package:motofixv11/widget/services.dart';
+import 'package:motofixv11/screens/bill_history.dart';
+import 'package:motofixv11/screens/wallet.dart';
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
 
   final String title;
 
@@ -25,10 +20,11 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
+
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 32, 32, 32),
+      backgroundColor: Color.fromARGB(255, 5, 178, 243),
       body: Column(children: [
         HomeAppBar(
             icon: Icon(
@@ -36,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
           color: Colors.white,
         )),
         ButtonMenu(
-            titleText: 'My Balance', subTitle: '123123\$', taptap: () {}),
+            titleText: 'My Balance', subTitle: '0.0đ', taptap: () {}),
         Container(
           padding: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
           margin: EdgeInsets.only(
@@ -154,7 +150,14 @@ class _MyHomePageState extends State<MyHomePage> {
                           width: 60,
                           height: 60,
                           child: OutlinedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => WalletScreen(), // Navigate to the home page
+                                ),
+                              );
+                            },
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -339,7 +342,14 @@ class _MyHomePageState extends State<MyHomePage> {
                               icon: Icon(Icons.account_box,color: Colors.blue),
                               titleText: 'Oil change service.',
                               subTitle: "Price: 60.000đ",
-                              taptap: () {}),
+                              taptap: () {
+                                Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => ServiceDetailScreen(serviceName: 'Oil change', serviceDetail: 'Oil Change for car/ motorBike', kilometer: 5, price: 60.000, mechanicName: 'Tran Anh Tu', mechanicDetail: '1000 nam kinh nghiem',invoicesScreen: RecentInvoicesScreen()), // Navigate to the home page
+                                  ),
+                                );
+                              }),
                           ButtonMenu2(
                               icon: Icon(Icons.account_box,color: Colors.blue),
                               titleText: 'Tire repair service',
@@ -376,7 +386,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 icon: Icon(Icons.home, color: Colors.blue),
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => RecentInvoicesScreen(),
+
+                    ),
+                  );
+                },
                 icon: Icon(Icons.list_alt, color: Colors.blue),
               ),
               IconButton(

@@ -52,6 +52,7 @@ dependencies:
   flutter_svg: ^2.0.5
   permission_handler: ^10.2.0
   google_maps_flutter_platform_interface: ^2.2.0
+  camera: ^0.10.5
 
 
 
@@ -89,6 +90,7 @@ flutter:
 
       - images/icon/mechanic_icon.png
       - images/icon/user_icon.png
+      - images/picture/oil_change.webp
      
 
   # An image asset can refer to one or more resolution-specific "variants", see

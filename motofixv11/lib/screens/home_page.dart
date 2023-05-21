@@ -3,7 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:motofixv11/controller/auth.dart';
 import 'package:motofixv11/widget/google_nav.dart';
 import 'package:motofixv11/screens/login_regsiter_page.dart';
-
+import 'package:motofixv11/screens/bill_history.dart';
+import 'package:motofixv11/screens/wallet.dart';
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
 
