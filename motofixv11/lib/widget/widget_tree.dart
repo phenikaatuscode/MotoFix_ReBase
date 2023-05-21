@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:motofixv11/screens/login_regsiter_page.dart';
-import 'package:motofixv11/screens/home_page.dart';
+import 'package:motofixv11/homepage.dart';
 import 'package:motofixv11/controller/auth.dart';
 
 class WidgetTree extends StatefulWidget {
@@ -17,7 +17,7 @@ class _WidgetTreeState extends State<WidgetTree> {
       stream: Auth().authStateChanges,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return HomePage();
+          return MyHomePage(title: 'MotoFix');
         } else {
           return LoginPage();
         }

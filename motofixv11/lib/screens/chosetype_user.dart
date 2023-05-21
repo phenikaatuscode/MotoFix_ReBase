@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:motofixv11/screens/mechanic_screens/mechanic_res.dart';
 import 'package:motofixv11/screens/normal_user_screens/normal_user_res.dart';
+
 class ChooseTypeUser extends StatefulWidget {
   @override
   _ChooseTypeUserState createState() => _ChooseTypeUserState();
@@ -36,7 +37,7 @@ class _ChooseTypeUserState extends State<ChooseTypeUser> {
                     },
                   ),
                   Text(
-                    'Bạn là...?',
+                    'Who are you?',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 24,
@@ -80,7 +81,7 @@ class _ChooseTypeUserState extends State<ChooseTypeUser> {
                       ),
                       SizedBox(height: 10),
                       Text(
-                        'Tôi là thợ sửa chữa',
+                        'I am a mechanic',
                         style: TextStyle(
                           color: isButton1Selected ? Colors.white : Colors.white,
                           fontSize: 18,
@@ -104,7 +105,6 @@ class _ChooseTypeUserState extends State<ChooseTypeUser> {
                     MaterialPageRoute(builder: (context) => NormalUserResScreen()),
                   );
                   // Add navigation logic for Button 2 if needed
-
                 },
                 child: Container(
                   color: Colors.transparent,
@@ -127,7 +127,7 @@ class _ChooseTypeUserState extends State<ChooseTypeUser> {
                       ),
                       SizedBox(height: 10),
                       Text(
-                        'Tôi là người thuê',
+                        'I am a customer',
                         style: TextStyle(
                           color: isButton2Selected ? Colors.white : Colors.white,
                           fontSize: 18,

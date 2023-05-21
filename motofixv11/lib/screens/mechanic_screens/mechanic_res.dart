@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:motofixv11/homepage.dart';
 class MechanicResScreen extends StatefulWidget {
   @override
   _MechanicResScreenState createState() => _MechanicResScreenState();
@@ -121,6 +121,7 @@ class _MechanicResScreenState extends State<MechanicResScreen> {
                 ),
                 child: Text('Register'),
                 onPressed: _agreedToTerms ? _registerUser : null,
+                
               ),
               SizedBox(height: 10),
               if (!_agreedToTerms)
@@ -170,6 +171,13 @@ class _MechanicResScreenState extends State<MechanicResScreen> {
           );
         },
       );
+      
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => MyHomePage(title: 'MotoFix'), // Navigate to the home page
+          ),
+        );
       return;
     }
 
